@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<h:form>
+		<div class="form-group">
+			<p:outputLabel value="Nuemro 1" for="num1"
+				styleClass="col-sm-2 control-label" />
+			<div class="col-sm-2">
+				<div class="col-sm-2">
+					<p:inputText id="num1" value="#{sumaBean.num1}"
+						styleClass="form-control-static" />
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<p:outputLabel value="Nuemro 2" for="num2"
+				styleClass="col-sm-2 control-label" />
+			<div class="col-sm-2">
+				<div class="col-sm-2">
+					<p:inputText id="num2" value="#{sumaBean.num2}"
+						styleClass="form-control-static" />
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-1">
+				<p:commandButton value="Sumar" action="#{sumaBean.sumar()}" styleClass="ui-priority-primary pull-right" update="respuesta" id="btn-sumar-cl" />
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-1">
+				El resultado es: <h:outputText id="respuesta" value="#{sumaBean.resultado}" />
+			</div>
+		</div>
+	</h:form>
+</h:body>
+</html>
